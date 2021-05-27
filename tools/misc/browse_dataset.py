@@ -53,8 +53,8 @@ def retrieve_data_cfg(config_path, skip_type, cfg_options):
         from mmcv.utils import import_modules_from_strings
         import_modules_from_strings(**cfg['custom_imports'])
     train_data_cfg = cfg.data.train
-    train_data_cfg['pipeline'] = [
-        x for x in train_data_cfg.pipeline if x['type'] not in skip_type
+    train_data_cfg['dataset']['pipeline'] = [
+        x for x in train_data_cfg.dataset.pipeline if x['type'] not in skip_type
     ]
 
     return cfg
