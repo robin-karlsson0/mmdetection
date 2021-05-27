@@ -1,3 +1,4 @@
+from .a2d2 import A2D2Dataset
 from .builder import DATASETS, PIPELINES, build_dataloader, build_dataset
 from .cityscapes import CityscapesDataset
 from .coco import CocoDataset
@@ -20,5 +21,5 @@ __all__ = [
     'DistributedSampler', 'build_dataloader', 'ConcatDataset', 'RepeatDataset',
     'ClassBalancedDataset', 'WIDERFaceDataset', 'DATASETS', 'PIPELINES',
     'build_dataset', 'replace_ImageToTensor', 'get_loading_pipeline',
-    'NumClassCheckHook'
+    'NumClassCheckHook', 'A2D2Dataset'
 ]
